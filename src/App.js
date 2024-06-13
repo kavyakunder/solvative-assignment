@@ -4,7 +4,6 @@ import { Fragment, useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import Pagination from "./component/Pagination";
-import { Audio } from "react-loader-spinner";
 function App() {
   const [places, setPlaces] = useState([]);
   const [inputPlace, setInputPlace] = useState("");
