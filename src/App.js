@@ -11,6 +11,7 @@ function App() {
   const [activePage, setActivePage] = useState(1);
   const [perPagePost, setPostsPerPage] = useState(3);
   const [paginationLimit, setPaginatonLimit] = useState(5);
+
   const handleFetchAPICall = () => {
     var options = {
       method: "GET",
@@ -90,7 +91,7 @@ function App() {
                 })
             ) : (
               <tr>
-                <td>No places found</td>
+                <td colspan="3">Start Searching</td>
               </tr>
             )}
           </tbody>
@@ -102,15 +103,17 @@ function App() {
         activePage={activePage}
         handlePagination={handlePagination}
       />
-      <input
-        className="pagination-limit"
-        name="pagination-limit"
-        id="pagination-limit"
-        type="number"
-        min="5"
-        max="10"
-        onChange={(e) => setPaginatonLimit(e.target.value)}
-      />
+      {places.length > 0 && (
+        <input
+          className="pagination-limit"
+          name="pagination-limit"
+          id="pagination-limit"
+          type="number"
+          min="5"
+          max="10"
+          onChange={(e) => setPaginatonLimit(e.target.value)}
+        />
+      )}
     </div>
   );
 }

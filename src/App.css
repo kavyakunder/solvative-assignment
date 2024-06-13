@@ -30,13 +30,14 @@
 table,
 th,
 td {
-  padding: 8px;
-  border: 1px solid rgb(24, 75, 126);
+  padding: 10px;
+  border: 1px solid rgb(222, 226, 230);
   border-collapse: collapse;
+  margin-top: 2rem;
 }
 th {
   font-weight: 700;
-  border-color: rgb(24, 75, 126);
+  border-color: rgb(222, 226, 230);
 }
 
 .loader {
